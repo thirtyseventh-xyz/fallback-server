@@ -52,6 +52,32 @@
                 font-style: normal;
                 color: oklch(0.751 0.0396 273.93);
             }
+
+            .explain-tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted oklch(0.751 0.0396 273.93); /* Add dots under the hoverable text */
+                cursor: pointer;
+                max-width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            .explain-tooltip-text {
+                visibility: hidden; /* Hidden by default */
+                /*width: 130px;*/
+                /*background-color: black;*/
+                color: oklch(0.751 0.0396 273.93);
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                position: absolute;
+                /*z-index: 1; !* Ensure tooltip is displayed above content *!*/
+            }
+
+            .explain-tooltip:hover .explain-tooltip-text {
+                visibility: visible;
+            }
         </style>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +87,12 @@
     <body>
         <div class="error space-grotesk-normal">
             <h1 class="space-grotesk-single-header">404</h1>
-            <p>there is no router associated with this domain</p>
+            <p>there is no route associated with this domain</p>
+            <p class="error explain-tooltip">what's this?
+                <span class="explain-tooltip-text">this is a fallback page that is served any time a request hits
+                    <a href="https://thirtyseventh.xyz">my</a> servers without a route in traefik for it
+                </span>
+            </p>
         </div>
     </body>
 </html>
