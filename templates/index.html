@@ -20,6 +20,10 @@
                     text-align: center;
                 }
 
+                a {
+                    color: oklch(0.472 0.232 300.92);
+                }
+
                 p {
                     margin-top: 0;
                     max-width: fit-content;
@@ -65,13 +69,17 @@
             }
             .explain-tooltip-text {
                 visibility: hidden; /* Hidden by default */
-                /*width: 130px;*/
-                /*background-color: black;*/
-                color: oklch(0.751 0.0396 273.93);
+                width: 300px;
+                top: 110%;
+                left: 50%;
+                margin-left: -150px;
+                background-color: oklch(0.687 0.037 274.725);
+                color: #1e1e2e;
                 text-align: center;
                 padding: 5px 0;
                 border-radius: 6px;
                 position: absolute;
+                cursor: auto;
                 /*z-index: 1; !* Ensure tooltip is displayed above content *!*/
             }
 
